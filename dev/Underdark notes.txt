@@ -1,0 +1,46 @@
+Underdark notes
+PARTIALLY WORKING:
+- limit total hitpoints at start (limited from 2nd turn onwards)
+
+
+TO-DO:
+- encumbrance display
+- food & drink
+- XP charts ( ActorLevel.exp_chart = function(level) return 1000*level*(level+1)/2 end )
+- feat select screen
+- Favored Classes'work by being +10% exp to that class
+- level up screen
+- factions
+
+LATER:
+
+- crits
+- skills  +5, +10, +15, +20 [handle them with talents and maybe loops]
+- calendar
+- stores
+- achievements
+
+SOME TIME IN THE FUTURE:
+- ranged combat
+- hide/move silently
+- sneak attack
+- flanking
+- flat-footed (foes in range?)
+- metamagic as sustains...and just assume every 'mage' is a sorcerer; have the Empower Spell sustain, you turn it on, cast a spell,
+it treats all variable as *1.5 but calculates cost as if it was 2 higher. Just for ease of use I'd suggest turning the sustain off after that
+- Cleave (as in - if you kill something and have Cleave and it's the first time it happened, don't use energy)
+- reserve feats http://dndtools.eu/feats/categories/reserve/
+- PrCs / BG2 style kits
+
+
+- randomized item names
+- level feelings
+- eating corpses
+- bones
+
+DIFFICULT:
+- stairs having a chance of not changing the depth
+- remove staircases from which you arrived
+
+
+//with : the callee is stored in "self", while with . it isnt
