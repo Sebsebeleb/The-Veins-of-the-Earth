@@ -429,6 +429,10 @@ function _M:isConcealed(actor)
 	return false
 end
 
+function _M:hasArcheryWeapon()
+	return (self.weapon and self.weapon.combat.range) or false
+end
+
 --- Can the target be applied some effects
 -- @param what a string describing what is being tried
 function _M:canBe(what)

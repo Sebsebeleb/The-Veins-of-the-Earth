@@ -8,18 +8,13 @@ newTalent{
 	cooldown = 8,
 	tactical = { ATTACK = 1 },
 	requires_target = true,
-
-	action = function(self, t)
-		local weapon = self:getInven("MAIN_HAND")[1]
-		local wep_range = weapon.combat.range
-		local tg = {type="bolt", range=wep_range, talent=t}
+	on_pre_use = function(self, t, silent) if not self:hasArcheryWeapon() then if not silent then game.logPlayer(self, "You require a rangede weapon to shoot") end return false end return true end,
+	range = function (self, t) return self.range or 0 end,
+	target = function(self, t) return  {type="bolt", range=self.weapon.range, talent=t} end,
+	action = function(self, t) 		
 		local x, y = self:getTarget(tg)
 		local _ _, _, _, x, y = self:canProject(tg, x, y)
-		if not self:getInven("MAIN_HAND")  then return end
 		if not x or not y then return nil end
-		if not wep_range then 
-			game.log(("You can't shoot a melee weapon!"))
-			return nil end
 
 		local damage = weapon.combat.dam
 
