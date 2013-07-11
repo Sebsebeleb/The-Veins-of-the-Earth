@@ -207,5 +207,9 @@ load("data/talents/arcane.lua")
 load("data/talents/metamagic.lua")
 load("data/talents/special.lua")
 load("data/talents/divine.lua")
+<<<<<<< HEAD
 load("data/talents/monster.lua")
 load("data/talents/cleric.lua")
+=======
+load("data/talents/monster.lua")
+>>>>>>> 6555a55ffe44401ef1089afea26aa5fdf46464bf
